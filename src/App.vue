@@ -1,32 +1,86 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <v-app id="thema" class="themalight">
+      <!-- header -->
+      <!-- <header-app :simple="true"></header-app> -->
+      <header-app class="header"></header-app>
+      <v-container class="container" fluid ma-0 pa-0>
+        <main >
+          <router-view />
+            <!-- footer -->
+            <!-- <footer-app></footer-app> -->
+        </main>
+      </v-container>    
+    </v-app>
   </div>
 </template>
+<script>
 
-<style>
+
+export default {
+  beforeCreate(){
+    const locale = localStorage.getItem('language')
+    if (locale) {
+      this.$store.state.language = locale      
+      localStorage.setItem('language',locale)
+    }else{      
+      //this.$store.state.locale = navigator.language.substring(0,2);
+      //this.$store.commit('chLanguage',navigator.language.substring(0,2))
+      this.$store.state.language = 'en'
+      localStorage.setItem('language','en')
+    }
+  }
+};
+</script>
+
+<style lang="scss">
+@import "sass/globals";
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url("./assets/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: Poppins-BoldItalic;
+  src: url("./assets/fonts/Poppins-BoldItalic.ttf");
+}
+@font-face {
+  font-family: Poppins-Black;
+  src: url("./assets/fonts/Poppins-Black.ttf");
+}
+@font-face {
+  font-family: Poppins-Italic;
+  src: url("./assets/fonts/Poppins-Italic.ttf");
+}
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("./assets/fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Poppins-MediumItalic;
+  src: url("./assets/fonts/Poppins-MediumItalic.ttf");
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.container {
+   background: var(--fondo_main);
+  width: 100vw;
+  height: 100%;
 }
 </style>
