@@ -30,12 +30,12 @@ body, html {
   padding: 0px;
   color: #2c3e50;
    //Corrige comportamiento por defecto de Vuetify de mostrar la barra de desplazamiento incluso si no hay desbordamiento
-   overflow-x: hidden;
+  //  overflow-x: hidden;
   font-size: 16px;
   ::-webkit-scrollbar {display: none;}
   @media (max-width: 600px) {
     font-size: 0.9rem; //Disminuye el tamaño de la fuente para celulares
-     overflow-x: hidden;
+    //  overflow-x: hidden;
   }
 }
  ::-webkit-scrollbar {

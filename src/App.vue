@@ -4,13 +4,14 @@
       <!-- header -->
       <!-- <header-app :simple="true"></header-app> -->
       <header-app class="header"></header-app>
+      <SubHeader-app></SubHeader-app>
       <v-container class="container" fluid ma-0 pa-0>
         <main >
           <router-view />
-            <!-- footer -->
-            <!-- <footer-app></footer-app> -->
+             <!-- footer -->
         </main>
-      </v-container>    
+      </v-container>   
+           <footer-app></footer-app>  
     </v-app>
   </div>
 </template>
@@ -79,8 +80,8 @@ export default {
 }
 
 .container {
-   background: var(--fondo_main);
+   background: var(--fondo_landing);
   width: 100vw;
-  height: 100%;
+  height: 65vh;
 }
 </style>
