@@ -121,7 +121,7 @@ export default {
         this.hoy = d.getUTCDate()-1;
         this.mes = d.getMonth() + 1;
         this.year = d.getUTCFullYear();
-        this.schedule.date_admission = year + "-" + month + "-" + day;
+        
        
     },
     methods: {
