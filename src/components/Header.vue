@@ -1,6 +1,6 @@
 <template>
     <header class="header-pos">
-             <v-layout wrap grow justify-center align-start text-xs-center tclass="elemento_cont">                
+             <v-layout wrap grow justify-center align-start text-xs-center class="elemento_cont">                
         <v-flex style="min-width: 100px; max-width: 100%;" grow xs12 sm5 md2  v-for="(element, index) in 5 " :key="index" justify-center class="flex-grow-1 flex-shrink-0 footer_litte">
                     <v-hover v-slot:default="{ hover }">
                      <v-card

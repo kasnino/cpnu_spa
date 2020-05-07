@@ -1,0 +1,76 @@
+<template>
+  <v-layout  xwrap justify-center align-start text-xs-center class="elemento_cont">                
+        <v-flex style="min-width: 100px; max-width: 100%;" xs12 sm7 md7  justify-center class="">
+             <div class="about mt-3">
+                 <router-link to="/">
+                <div>
+                <v-icon size="16"> fas fa-arrow-left</v-icon>
+                <span class="ml-2 sub_titulos texto_resaltado">Regresar a opciones de Consulta</span>
+                </div>
+                 </router-link>
+                     <v-flex  xs12 mt-5 sm12 md12  text-center class="" >
+                    <v-btn icon class="boton__ hvr_scale">
+                          <v-icon  class="iconos " size="45">fas fa-list-ol</v-icon>
+                       </v-btn>
+                </v-flex>
+                     <v-flex  xs12 mt-3  sm12 md12  text-center class="" >
+                   <span class="titulo_centro">Numero de Radicacion</span>
+                   
+                </v-flex>
+                   <v-flex  xs12 mt-1  sm12 md12  text-center class="" >
+                   <span class="sub_texto_litte">Aqui Encontrara la manera mas facil de consultar su proceso</span>
+                </v-flex>
+             </div>
+             
+        </v-flex>
+  </v-layout>
+
+</template>
+<script>
+// @ is an alias to /src
+
+
+export default {
+  name: 'Home',
+  components: {
+   
+  },
+      data() {
+        return {
+           tab:'',
+        }
+    },
+}
+</script>
+<style lang="scss" scoped>
+@import '../sass/globals';
+
+.sub_titulos{
+   font-family: Poppins-Regular;
+   font-size: 13px;
+   color: var(--sub_texto);
+}
+
+.sub_texto_litte{
+   font-family: Poppins-Regular;
+   font-size: 16px;
+   color: var(--sub_texto);
+   text-transform: uppercase;
+}
+
+.texto_resaltado{
+   font-family: Poppins-Regular;
+   font-size: 13px;
+   color: var(--sub_texto);
+   cursor: pointer;
+
+}
+
+.texto_resaltado:hover{
+   text-decoration: underline;
+    font-size: 13px;
+   text-decoration-color: var(--sub_texto);
+   color: var(--sub_texto);
+
+}
+</style>

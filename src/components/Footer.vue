@@ -1,6 +1,6 @@
 <template>
-
-<v-img justify-center class="imagen__footer elevation-10" elevation="7" text-xs-center text-center src="@/assets/bg-footer.png">
+  <footer class="footer_pos">
+<v-img justify-center class="imagen__footer elevation-10 fsooter_pos" elevation="7" text-xs-center text-center src="@/assets/bg-footer.png">
 
          <v-layout wrap justify-center align-start text-xs-center tclass="elemento_cont">                
         <v-flex xs12 sm8 ma-4 pa-4 md8 justify-center class="  footer_litte">
@@ -20,6 +20,7 @@
   
     
 </v-img>
+  </footer>
 </template>
 
 <script>
@@ -45,7 +46,6 @@
 </script>
 <style lang="scss" scoped>
 @import '../sass/globals';
-
 
 .texto_resaltado{
     color: #337ab7;

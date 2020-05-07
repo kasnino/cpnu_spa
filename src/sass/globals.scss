@@ -41,7 +41,15 @@ body, html {
  ::-webkit-scrollbar {
 	display: none;
  }
+ .v-application a {
+  text-decoration: none;
+}
+.titulo_centro{
+  font-family: Poppins-SemiBold;
+  font-size: 1.6em;
+  color: var(--titulo_centro)
 
+}
 svg {
   max-height: 100%;
   max-width: 100%;

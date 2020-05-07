@@ -21,9 +21,17 @@
   --fondo_landing: #F8F8F9;
   --texto_bold:#5D2263;
   --color_letra:#19325b;
+  --texto_land:#666666;
+  --hover_efecto: #66666616;
+  --titulo_centro:#19325b;
+  --sub_texto:#6666669c;
 } 
 
 .themadark { 
+  --sub_texto:#FFFFFF;
+  --titulo_centro:#FFFFFF;
+  --hover_efecto: rgba(255,255,255,0.27);
+  --texto_land:#FFFFFF;
   --color_letra:#FFFFFF;
 --fondo_portada: #0b0910;
   --texto_bold:#FFFFFF;
@@ -33,9 +41,7 @@
 --color_svg: rgba(255,255,255,0.9);
 --texto-svg: #FFFFFF;
 --letra-textos: #f8f8f9bd;
---fondo_main: #0b0910;  /* fallback for old browsers */
---fondo_main: #0b0910;  /* Chrome 10-25, Safari 5.1-6 */
---fondo_main: #0b0910; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+--fondo_main: #19202c;  /* fallback for old browsers */
 --fondo_header:  #060508; /* fallback for old browsers */
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 --dark_title_texto: #f8f8f9; 
@@ -49,6 +55,6 @@
 --dark_svgacces: #FFFFFF;
 --fondo_modalaccs: #000c1a7d;
 --dark_svgcerrar: #66CC33;
---fondo_landing: #000c1a7d;
+--fondo_landing: #4a5568;
 } 
 

@@ -1,9 +1,9 @@
 <template>
     <header class="header-pos">
-             <v-layout mt-0 flex-nowrap justify-center align-start text-xs-center tclass="elemento_cont">                
-        <v-flex xs12 sm12 md12  :key="index" justify-center class="  footer_litte">
+             <v-layout mt-0 wrap grow justify-center align-start text-xs-center tclass="elemento_cont">                
+        <v-flex xs12 sm12 md12  grow :key="index" justify-center class="  footer_litte">
                    
-                     <v-card
+                                        <v-card
                                               class="mx-auto carta"
                                               active-class="carta"
                                               max-width="auto"
@@ -11,9 +11,9 @@
                                               elevation="4"
                                               tile
                                             >
-                       
-                                             <v-layout  wrap justify-center align-center text-xs-center class="">
-                                                    <v-flex  mt-5 xs12 sm3 md3  text-center class="cabezera_main" >
+                                             <v-layout justify-center align-center text-xs-center class="">
+                                                  <v-layout  justify-center align-center text-xs-center class="">
+                                                    <v-flex  mt-5 xs3 sm3 md3  text-center class="cabezera_main" >
                                                         <div>
                                                         <v-img  justify-center text-xs-center text-center class="logo_escudos" 
                                                         :style="{left: '50%', transform:'translateX(-50%)', top:'25%'}"
@@ -21,32 +21,36 @@
                                                          </v-img>
                                                         </div>
                                                            <div  class="mt-4">
-                                                            <v-btn text depressed small class="boton__">Normal</v-btn>
+                                                            <v-btn text depressed small class="boton__">Inicio</v-btn>
                                                         </div>
-                                                      
                                                     </v-flex>
-                                                    <v-flex  xs12 sm6 md6 text-xs-center justify-center  align-center class="cabezera_main" >
-                                                    <v-layout  wrap justify-center align-center text-xs-center class="">
-                                                            <v-flex xs12 sm2 md2  class="cabezera_main centrar_elem" >
+                                                  </v-layout>
+                                                     
+                                                    <v-flex  xs6 sm6 md6 text-xs-center justify-center  align-center class="cabezera_main" >
+                                                  
+                                      
+                                                   <v-layout   justify-center align-center text-xs-center class="">
+                                                      <v-flex  xs2 sm2 md2  class="cabezera_main centrar_elem" >
                                                                <v-btn icon class="boton__ hvr_scale">
-                                                                <v-icon class="iconos">fas fa-eye</v-icon>
+                                                                <v-icon size="30" color="#3c91a5" class="iconos">fas fa-eye</v-icon>
                                                                 </v-btn> 
                                                             </v-flex>
-                                                                <v-flex  xs12 sm8 md8  text-center class="cabezera_main" >
+                                                                <v-flex  xs8 sm8 md8  text-center class="cabezera_main" >
                                                                           <div  class="mt-4 fechas_actual">
-                                                                           {{hoy}}  {{meses[mes-1]}} - {{year}}
-                                                                        
+                                                                           {{hoy}} de {{meses[mes-1]}} - {{year}}
                                                                  </div>
                                                                  <div class="mt-6 titulo_main__portada">
                                                                      CONSULTA DE PROCESOS NACIONAL UNIFICADA</div>
                                                                    
                                                                 </v-flex>
-                                                                   <v-flex  xs12 sm2 md2  text-center class="cabezera_main" >
+                                                                   <v-flex  xs2 sm2 md2  text-center class="cabezera_main" >
                                                                    </v-flex>
+                                                                    
                                                     </v-layout>
                                                     </v-flex>
-
-                                                           <v-flex  mt-5 xs12 sm3 md3  text-center class="cabezera_main" >
+                                                    
+                                                <v-layout   justify-center align-center text-xs-center class="">
+                                                           <v-flex  mt-5 xs3 sm3 md3  text-center class="cabezera_main" >
                                                         <div>
                                                         <v-img  justify-center text-xs-center text-center class="logo_escudos" 
                                                         :style="{left: '50%', transform:'translateX(-50%)', top:'25%'}"
@@ -64,6 +68,7 @@
                                                            
                                                       
                                                     </v-flex>
+                                                              </v-layout>
                                                       
                                              </v-layout>
    
@@ -146,6 +151,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../sass/globals';
+
+ @media (max-width: 600px) {
+.titulo_main__portada{
+    font-family: Poppins-SemiBold;
+     color:var(--color_letra);
+        font-size: 14px;
+    line-height: 21px;
+}
+
+ }
 .boton__{
     color: #337ab7;
     cursor: pointer;
@@ -170,13 +185,15 @@ export default {
 
 }
 
+ @media (min-width: 600px) {
 .titulo_main__portada{
-     font-family: Poppins-SemiBold;
+    font-family: Poppins-SemiBold;
      color:var(--color_letra);
      font-size: 1.8em;
      line-height: 35px;
-
 }
+
+ }
 .iconos{
      color:var(--color_letra);
 }
@@ -189,7 +206,7 @@ export default {
       font-size: 16px;
 }
 .logo_escudos{
-    width: 120px;
+    width: 180px;
     height: 120px;
 }
 .cabezera_main{
