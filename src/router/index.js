@@ -41,9 +41,14 @@ const Newayuda = { template: '<div>Ayuda</div>'}
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  
+ 
   routes
 })
 
 export default router
+
+
+
+//   mode: 'history',
+  // base: process.env.BASE_URL,

@@ -19,6 +19,8 @@
                 </v-flex>
                    <v-flex  xs12 mt-1  sm12 md12  text-center class="" >
                    <span class="sub_texto_litte">Sujeto Procesal</span>
+
+                   {{info}}
                 </v-flex>
              </div>
              
@@ -27,6 +29,7 @@
 
 </template>
 <script>
+import axios from "axios";
 // @ is an alias to /src
 
 
@@ -38,8 +41,19 @@ export default {
       data() {
         return {
            tab:'',
+           info: null
         }
     },
+     created() {
+    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((result) => {
+      console.log(result.data);
+    })
+  },
+      mounted () {
+              axios
+                .get('https://consultaprocesos.ramajudicial.gov.co:444/api/v1/Procesos/NumeroRadicacion/05001600020620120063900')
+                .then(response => (this.info = response))
+            }
 }
 </script>
 <style lang="scss" scoped>
