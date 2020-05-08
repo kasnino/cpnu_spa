@@ -21,17 +21,20 @@
   --fondo_landing: #F8F8F9;
   --texto_bold:#5D2263;
   --color_letra:#19325b;
-  --texto_land:#666666;
+  --texto_land:#666666ba;
   --hover_efecto: #66666616;
   --titulo_centro:#19325b;
   --sub_texto:#6666669c;
+  --color_tabla: #e8f5e9;
+  --border_tb: #dddddd;
 } 
 
 .themadark { 
+  --border_tb: none;
   --sub_texto:#FFFFFF;
   --titulo_centro:#FFFFFF;
   --hover_efecto: rgba(255,255,255,0.27);
-  --texto_land:#FFFFFF;
+  --texto_land:#ffffffcc;
   --color_letra:#FFFFFF;
 --fondo_portada: #0b0910;
   --texto_bold:#FFFFFF;
@@ -54,6 +57,7 @@
 --letras-navbar: #FFFFFF;
 --dark_svgacces: #FFFFFF;
 --fondo_modalaccs: #000c1a7d;
+--color_tabla: #000c1a7d;
 --dark_svgcerrar: #66CC33;
 --fondo_landing: #4a5568;
 } 

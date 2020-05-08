@@ -24,12 +24,12 @@
                                                       <v-flex  xs12 sm12 md12  text-center class="" >
 
                                                         <v-layout  mt-3 wrap grow justify-center align-start text-xs-start class="contendor_icon">    
-                                                        <v-btn icon class="boton__ hvr_scale">
+                                                        <v-btn icon class="mt-3 boton__ hvr_scale">
                                                         <v-icon  class="iconos " size="35">{{icons[index]}}</v-icon>
                                                         </v-btn>
                                                         </v-layout>
-                                                          <v-layout  wrap grow justify-center align-center text-xs-center class=" ">    
-                                                          <span class="d-flex texto_interno" 
+                                                          <v-layout  mb-3 wrap grow justify-center align-center text-xs-center class=" ">    
+                                                          <span class=" mb-3 d-flex pa-2 texto_interno" 
                                                                 :id="`texto${index}`">
                                                                   {{textos[index]}}
                                                               </span>
@@ -64,16 +64,16 @@ export default {
       data() {
         return {
            tab:'',
-            route:['/NumeroRadicacion','/ConsultaRazonSocial','/ConsultaRazonSocial','/ConsultaRazonSocial','/ConsultaRazonSocial'],
+            route:['/NumeroRadicacion','/ConsultaRazonSocial','/ConstruirNumero','/ConsultaRazonSocial','/ConsultaRazonSocial'],
           selectcolor:['#91be91','#ffd20f', '#4f90c8', '#cb302f', '#0a7a39'],
-          icons:['fas fa-list-ol','fas fa-file-invoice', 'fas fa-gavel', 'fas fa-chalkboard-teacher', 'fas fa-user-tie'],
+          icons:['fas fa-list-ol','fas fa-file-invoice', 'fas fa-chalkboard-teacher', 'fas fa-user-tie', 'fas fa-gavel'],
             color:['#91be91','#ffd20f', '#4f90c8', '#cb302f', '#0a7a39'],
             textos:[
                 'Numero de Radicacion',
                 'Consultar por Nombre o Razón Social',
-                'Ultimas Actuaciones por Nombre o Razón Social',
                 'Construir Numero',
-                'Consultar por Juez / Magistrado y Clase de Proceso'
+                'Consultar por Juez / Magistrado y Clase de Proceso',
+                'Juzgados de Ejecución de Penas y Medidas de Seguridad'
             ]
 
         
@@ -83,6 +83,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../sass/globals';
+
+.theme--light.v-btn.v-btn--icon {
+  color: var(--texto_land);
+}
 .iconos{
   color: var(--texto_land);
   width: 100%;
@@ -105,7 +109,7 @@ export default {
 }
 .contendor_icon{
   width: 100%;
-  height: 88px;
+  height: 78px;
 }
 .cards_ele{
   display: flex;

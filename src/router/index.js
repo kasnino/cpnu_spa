@@ -20,6 +20,14 @@ const Newayuda = { template: '<div>Ayuda</div>'}
     component: () => import(/* webpackChunkName: "about" */ '../views/ConsultaRazonSocial.vue')
   },
   {
+    path: '/ConstruirNumero',
+    name: '/ConstruirNumero',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/ConstruirNumero.vue')
+  },
+  {
     path: '/NumeroRadicacion',
     name: 'NumeroRadicacion',
     // route level code-splitting

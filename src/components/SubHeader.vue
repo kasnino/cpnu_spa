@@ -7,52 +7,55 @@
                                               class="mx-auto carta"
                                               active-class="carta"
                                               max-width="auto"
-                                              height="190"
+                                              height="auto"
                                               elevation="4"
                                               tile
                                             >
                                              <v-layout justify-center align-center text-xs-center class="">
-                                                  <v-layout  justify-center align-center text-xs-center class="">
-                                                    <v-flex  mt-5 xs3 sm3 md3  text-center class="cabezera_main" >
+                                                
+                                                    <v-flex  mt-4 ml-10 xs2 sm2 md2  text-center class="cabezera_main" >
                                                         <div>
-                                                        <v-img  justify-center text-xs-center text-center class="logo_escudos" 
+                                                        <v-img  :contain="true" justify-center text-xs-center text-center class="logo_escudos" 
                                                         :style="{left: '50%', transform:'translateX(-50%)', top:'25%'}"
                                                          src="@/assets/logo1.png">
                                                          </v-img>
                                                         </div>
                                                            <div  class="mt-4">
-                                                            <v-btn text depressed small class="boton__">Inicio</v-btn>
+                                                            <v-btn  style="font-family:Poppins-Regular;" text depressed small class="boton__">Inicio</v-btn>
                                                         </div>
                                                     </v-flex>
-                                                  </v-layout>
-                                                     
-                                                    <v-flex  xs6 sm6 md6 text-xs-center justify-center  align-center class="cabezera_main" >
+                                                  
+                                                         <v-flex   xs2 sm2 md2  class="cabezera_main centrar_elem" >
+                                                               <v-btn icon class=" eye_posicion boton__ hvr_scale">
+                                                                <v-icon size="30" color="#3c91a5" class=" iconos">fas fa-eye</v-icon>
+                                                                </v-btn> 
+                                                            </v-flex>
+                                                    <v-flex  xs4 sm4 md4 text-xs-center justify-center  align-center class="cabezera_main" >
                                                   
                                       
                                                    <v-layout   justify-center align-center text-xs-center class="">
-                                                      <v-flex  xs2 sm2 md2  class="cabezera_main centrar_elem" >
-                                                               <v-btn icon class="boton__ hvr_scale">
-                                                                <v-icon size="30" color="#3c91a5" class="iconos">fas fa-eye</v-icon>
-                                                                </v-btn> 
-                                                            </v-flex>
-                                                                <v-flex  xs8 sm8 md8  text-center class="cabezera_main" >
+                                                  
+                                                                <v-flex  xs12 sm12 md12  text-center class="cabezera_main" >
                                                                           <div  class="mt-4 fechas_actual">
                                                                            {{hoy}} de {{meses[mes-1]}} - {{year}}
                                                                  </div>
-                                                                 <div class="mt-6 titulo_main__portada">
-                                                                     CONSULTA DE PROCESOS NACIONAL UNIFICADA</div>
-                                                                   
-                                                                </v-flex>
-                                                                   <v-flex  xs2 sm2 md2  text-center class="cabezera_main" >
+                                                                   <v-flex xs12 sm12 md12  text-center class="" >
+                                                                 <h1 class="mt-6 titulo_main__portada">
+                                                                     CONSULTA DE PROCESOS NACIONAL UNIFICADA</h1>
                                                                    </v-flex>
+                                                                </v-flex>
+                                                                  
                                                                     
                                                     </v-layout>
                                                     </v-flex>
-                                                    
-                                                <v-layout   justify-center align-center text-xs-center class="">
-                                                           <v-flex  mt-5 xs3 sm3 md3  text-center class="cabezera_main" >
+                                                     <v-flex  xs2 sm2 md2  text-center class="cabezera_main" >
+                                                       <!-- aqui va el icono de inicio de secion -->
+                                                        </v-flex>
+                                                
+                                               
+                                                           <v-flex mt-4 mr-10  xs2 sm2 md2  text-center class="cabezera_main" >
                                                         <div>
-                                                        <v-img  justify-center text-xs-center text-center class="logo_escudos" 
+                                                        <v-img  :contain="true" justify-center text-xs-center text-center class="logo_escudos" 
                                                         :style="{left: '50%', transform:'translateX(-50%)', top:'25%'}"
                                                          src="@/assets/EscudoColombia.png">
                                                          </v-img>
@@ -68,11 +71,14 @@
                                                            
                                                       
                                                     </v-flex>
-                                                              </v-layout>
+                                                              
                                                       
                                              </v-layout>
    
+                                             <v-tabs-slider class="barra_" centered grow :color="selectcolor"></v-tabs-slider>
+
                                              </v-card>  
+
                   
         </v-flex> 
              </v-layout>
@@ -90,6 +96,7 @@ export default {
     },
     data() {
         return {
+            selectcolor:'#19325b',
             meses:['Ene', 'Feb', 'Mar', 'Abr', 'Mayo', 'Jun'],
             color:['#91be91','#ffd20f', '#4f90c8', '#cb302f', '#0a7a39'],
             textos:[
@@ -102,7 +109,7 @@ export default {
             hoy:'',
             mes:'',
             year:'',
-             changescolor: true,
+             changescolor: false,
 
         
         }
@@ -118,7 +125,7 @@ export default {
     },
     created() {
         var d = new Date();
-        this.hoy = d.getUTCDate()-1;
+        this.hoy = d.getUTCDate();
         this.mes = d.getMonth() + 1;
         this.year = d.getUTCFullYear();
         
@@ -152,24 +159,41 @@ export default {
 <style lang="scss" scoped>
 @import '../sass/globals';
 
- @media (max-width: 600px) {
+
+ @media (max-width: 702px) {
 .titulo_main__portada{
     font-family: Poppins-SemiBold;
      color:var(--color_letra);
-        font-size: 14px;
+        font-size: 15px;
     line-height: 21px;
+}
+
+.barra_{
+    width: 100%;
+    height: 3px;
+
+}
+
+.eye_posicion{
+    position: absolute;
+    top: 5px;
+    left: 7px;
 }
 
  }
 .boton__{
     color: #337ab7;
     cursor: pointer;
+      font-family: Poppins-Regular;
+   
 }
 .posicionar{
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 5px;
+    top: -10px;
 }
+
+
 
 .carta{
     width: 100%;
@@ -185,11 +209,11 @@ export default {
 
 }
 
- @media (min-width: 600px) {
+ @media (min-width: 703px) {
 .titulo_main__portada{
     font-family: Poppins-SemiBold;
      color:var(--color_letra);
-     font-size: 1.8em;
+     font-size: 1.7em;
      line-height: 35px;
 }
 

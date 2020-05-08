@@ -10,16 +10,11 @@
                  </router-link>
                      <v-flex  xs12 mt-5 sm12 md12  text-center class="" >
                     <v-btn icon class="boton__ hvr_scale">
-                          <v-icon  class="iconos " size="45">fas fa-file-invoice</v-icon>
+                          <v-icon  class="iconos " size="45">fas fa-chalkboard-teacher</v-icon>
                        </v-btn>
                 </v-flex>
                      <v-flex  xs12 mt-3  sm12 md12  text-center class="" >
-                   <span class="titulo_centro">Consulta por Nombre o Razón Social</span>
-                   
-                </v-flex>
-                   <v-flex  xs12 mt-1  sm12 md12  text-center class="" >
-                   <span class="sub_texto_litte">Sujeto Procesal</span>
-
+                   <span class="titulo_centro">Construir Numero</span>
                    
                 </v-flex>
              </div>

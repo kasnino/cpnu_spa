@@ -82,6 +82,6 @@ export default {
 .container {
    background: var(--fondo_landing);
   width: 100vw;
- min-height: 60%;
+ min-height: 100%; 
 }
 </style>
